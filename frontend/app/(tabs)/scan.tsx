@@ -185,16 +185,11 @@ export default function ScanScreen() {
         <TouchableOpacity
           style={styles.manualButton}
           onPress={() => {
-            // For demo, create a test QR code data
-            const testData = {
-              station_id: 'DEMO001',
-              amount: 50000, // ₹500 in paise
-            };
+            // Navigate to charge selection for demo
             router.push({
-              pathname: '/payment',
+              pathname: '/charge-selection',
               params: {
-                station_id: testData.station_id,
-                amount: testData.amount.toString(),
+                station_id: 'DEMO001',
               },
             });
           }}>
