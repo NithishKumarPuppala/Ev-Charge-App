@@ -183,6 +183,13 @@ export default function PaymentScreen() {
           
           <View style={styles.detailsCard}>
             <View style={styles.detailRow}>
+              <Text style={styles.detailLabel}>Charging Units</Text>
+              <Text style={styles.detailValue}>
+                {units ? `${parseFloat(units).toFixed(2)} kWh` : 'N/A'}
+              </Text>
+            </View>
+            
+            <View style={styles.detailRow}>
               <Text style={styles.detailLabel}>Charging Amount</Text>
               <Text style={styles.detailValue}>₹{formatAmount(parseInt(amount || '0'))}</Text>
             </View>
