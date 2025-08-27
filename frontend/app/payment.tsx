@@ -15,9 +15,10 @@ import { router, useLocalSearchParams } from 'expo-router';
 import Constants from 'expo-constants';
 
 export default function PaymentScreen() {
-  const { station_id, amount } = useLocalSearchParams<{
+  const { station_id, amount, units } = useLocalSearchParams<{
     station_id: string;
     amount: string;
+    units?: string;
   }>();
   
   const [loading, setLoading] = useState(false);
