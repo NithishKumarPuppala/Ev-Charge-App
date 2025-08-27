@@ -153,11 +153,14 @@ backend:
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Implemented /api/transactions endpoints for fetching transaction history"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: All transaction APIs working correctly. GET /api/transactions returns all transactions with proper sorting. GET /api/transactions/recent returns max 3 recent transactions. GET /api/transactions/{id} returns specific transaction by ID with 404 for non-existent IDs. All responses include required fields: id, station_id, amount, status, timestamp."
 
 frontend:
   - task: "Tab-based navigation setup"
