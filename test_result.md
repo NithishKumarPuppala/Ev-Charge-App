@@ -123,11 +123,14 @@ backend:
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Implemented /api/payment/create-order endpoint for Razorpay integration"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: Payment order creation working correctly. Successfully created order for station DEMO001 with ₹500 (50000 paise). Returns proper order_id, amount, currency, and status fields."
   
   - task: "Payment completion API"
     implemented: true
