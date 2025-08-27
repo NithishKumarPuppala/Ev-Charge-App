@@ -62,12 +62,11 @@ export default function ScanScreen() {
         throw new Error('Invalid QR code: Missing station ID or amount');
       }
 
-      // Navigate to payment confirmation
+      // Navigate to charge selection screen
       router.push({
-        pathname: '/payment',
+        pathname: '/charge-selection',
         params: {
           station_id: qrData.station_id,
-          amount: qrData.amount.toString(),
         },
       });
     } catch (error) {
