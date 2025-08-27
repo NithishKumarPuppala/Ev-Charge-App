@@ -243,9 +243,6 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Payment order creation API"
-    - "Payment completion API"
-    - "Transaction management APIs"
     - "QR code scanner with camera"
     - "Payment confirmation screen"
   stuck_tasks: []
